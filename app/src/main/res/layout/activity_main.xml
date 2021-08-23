@@ -2,59 +2,123 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_fog"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/cityname_MainActivity_textView"
+        android:id="@+id/citylabel_MainActivity_textView"
         style="@style/city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/roboto"
-        android:text="İstanbul"
+        android:text="@string/london"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/city_header_MainActivity_linearLayout"
+    <TextView
+        android:id="@+id/date_MainActivity_textView"
+        style="@style/city_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@id/cityname_MainActivity_textView"
-        app:layout_constraintTop_toBottomOf="@id/cityname_MainActivity_textView">
+        android:text="@string/sample_date"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/citylabel_MainActivity_textView"
+        app:layout_constraintTop_toBottomOf="@id/citylabel_MainActivity_textView" />
 
-        <TextView
-            android:id="@+id/time_MainActivity_textView"
-            style="@style/city_info"
+    <TextView
+        android:id="@+id/temparature_MainActivity_textView"
+        style="@style/temparature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/sample_temparature"
+        app:layout_constraintStart_toStartOf="@id/date_MainActivity_textView"
+        app:layout_constraintTop_toBottomOf="@id/date_MainActivity_textView"
+        tools:text="5°" />
+
+    <LinearLayout
+        android:id="@+id/icon_info_MainActivity_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_padding"
+        app:layout_constraintStart_toStartOf="@id/temparature_MainActivity_textView"
+        app:layout_constraintTop_toBottomOf="@id/temparature_MainActivity_textView">
+
+        <ImageView
+            android:id="@+id/weather_icon_MainActivity_imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="9.45"
-            android:textColor="@color/white" />
+            android:contentDescription="@string/weather_icon_info"
+            app:srcCompat="@drawable/ic_foggy" />
 
         <Space
-            android:layout_width="@dimen/space"
+            android:layout_width="@dimen/layout_margin"
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/date_MainActivity_textView"
-            style="@style/city_info"
+            android:id="@+id/icon_info_MainActivity_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Monday, 23 Aug 2021"
-            android:textColor="@color/white" />
+            android:text="@string/sample_desription"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <View
+        android:id="@+id/horizantal_line_MainActivity_view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/mid_padding"
         android:alpha=".4"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/city_header_MainActivity_linearLayout" />
+        app:layout_constraintTop_toBottomOf="@id/icon_info_MainActivity_linearLayout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_padding"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/icon_info_MainActivity_linearLayout"
+        app:layout_constraintTop_toBottomOf="@id/horizantal_line_MainActivity_view">
+
+        <TextView
+            style="@style/detail_headers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wind"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/value_wind_MainActivity_textView"
+            style="@style/detail_values"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:text="@string/sample_wind_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wind_speed_unit"
+            android:textColor="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/wind_progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_marginTop="@dimen/small_padding"
+            android:max="100"
+            android:progress="50"
+            tools:progress="12" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

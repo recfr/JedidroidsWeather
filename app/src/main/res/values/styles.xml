@@ -12,4 +12,23 @@
         <item name="android:fontFamily">@font/roboto</item>
     </style>
 
+    <style name="temparature">
+        <item name="android:textSize">@dimen/temparature_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="detail_headers">
+        <item name="android:textSize">@dimen/detail_headers_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:background">@color/transparent_background</item>
+    </style>
+
+    <style name="detail_values">
+        <item name="android:textSize">@dimen/detail_values_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
 </resources>

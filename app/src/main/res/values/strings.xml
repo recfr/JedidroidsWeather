@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">JedidroidsWeather</string>
+    <string name="london">London</string>
+    <string name="sample_date">Monday, 23 Aug 2021</string>
+    <string name="sample_temparature">5°</string>
+    <string name="weather_icon_info">weather_icon</string>
+    <string name="sample_desription">Foggy</string>
+    <string name="wind">Wind</string>
+    <string name="sample_wind_value">12</string>
+    <string name="wind_speed_unit">km/h</string>
 </resources>
