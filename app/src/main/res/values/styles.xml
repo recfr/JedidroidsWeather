@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="city_name">
+        <item name="android:textSize">@dimen/city_name_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="city_info">
+        <item name="android:textSize">@dimen/city_info_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+</resources>

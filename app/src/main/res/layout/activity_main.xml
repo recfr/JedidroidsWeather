@@ -4,15 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_fog"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/cityname_MainActivity_textView"
+        style="@style/city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/roboto"
+        android:text="İstanbul"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/city_header_MainActivity_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/cityname_MainActivity_textView"
+        app:layout_constraintTop_toBottomOf="@id/cityname_MainActivity_textView">
+
+        <TextView
+            android:id="@+id/time_MainActivity_textView"
+            style="@style/city_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9.45"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="@dimen/space"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/date_MainActivity_textView"
+            style="@style/city_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday, 23 Aug 2021"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:alpha=".4"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_header_MainActivity_linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
