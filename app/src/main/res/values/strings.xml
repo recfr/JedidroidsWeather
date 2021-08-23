@@ -6,6 +6,12 @@
     <string name="weather_icon_info">weather_icon</string>
     <string name="sample_desription">Foggy</string>
     <string name="wind">Wind</string>
-    <string name="sample_wind_value">12</string>
+    <string name="sample_wind_value">5</string>
+    <string name="sample_rain_value">44</string>
+    <string name="sample_humidity_value">78</string>
     <string name="wind_speed_unit">km/h</string>
+    <string name="rain">Rain</string>
+    <string name="humidity">Humidity</string>
+    <string name="percentage_symbol">%</string>
+
 </resources>
