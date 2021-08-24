@@ -17,6 +17,7 @@
         android:layout_marginTop="70dp"
         android:fontFamily="@font/roboto"
         android:text="@string/london"
+        tools:text="@string/london"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,39 +36,20 @@
         style="@style/temparature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="130dp"
         android:text="@string/sample_temparature"
         app:layout_constraintStart_toStartOf="@id/date_MainActivity_textView"
         app:layout_constraintTop_toBottomOf="@id/date_MainActivity_textView"
         tools:text="5°" />
 
-    <LinearLayout
-        android:id="@+id/icon_info_MainActivity_linearLayout"
+    <TextView
+        android:id="@+id/weather_description_info_MainActivity_textView"
+        style="@style/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/small_padding"
+        android:text="@string/sample_desription"
         app:layout_constraintStart_toStartOf="@id/temparature_MainActivity_textView"
-        app:layout_constraintTop_toBottomOf="@id/temparature_MainActivity_textView">
-
-        <ImageView
-            android:id="@+id/weather_icon_MainActivity_imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/weather_icon_info"
-            app:srcCompat="@drawable/ic_foggy" />
-
-        <Space
-            android:layout_width="@dimen/layout_margin"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/icon_info_MainActivity_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sample_desription"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@id/temparature_MainActivity_textView" />
 
     <View
         android:id="@+id/horizantal_line_MainActivity_view"
@@ -77,20 +59,19 @@
         android:alpha=".4"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icon_info_MainActivity_linearLayout" />
-
+        app:layout_constraintTop_toBottomOf="@id/weather_description_info_MainActivity_textView" />
 
     <LinearLayout
         android:id="@+id/parent_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/big_padding"
+        android:baselineAligned="false"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizantal_line_MainActivity_view"
-        android:baselineAligned="false">
+        app:layout_constraintTop_toBottomOf="@id/horizantal_line_MainActivity_view">
 
         <LinearLayout
             android:layout_width="0dp"

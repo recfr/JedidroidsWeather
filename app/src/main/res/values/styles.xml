@@ -18,6 +18,12 @@
         <item name="android:fontFamily">@font/roboto</item>
     </style>
 
+    <style name="description">
+        <item name="android:textSize">@dimen/detail_values_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
     <style name="detail_headers">
         <item name="android:textSize">@dimen/detail_headers_text_size</item>
         <item name="android:textColor">@color/white</item>
