@@ -31,23 +31,12 @@ class MainActivity : AppCompatActivity() {
 
         val c = Calendar.getInstance()
         val cDayName = c.get(Calendar.DAY_OF_WEEK)
-        val date = SimpleDateFormat("dd MMM yyyy").format(c.getTime())
-        val fullDateInfo = "${getDayName(cDayName)}, $date"
+        val date = SimpleDateFormat("EEEE, dd MMM yyyy").format(c.getTime())
 
-        dateInformation.text = fullDateInfo
+        dateInformation.text = date
+        Log.e("onCreate", date)
     }
 
-    private fun getDayName(dayOfWeek: Int): String {
-        return when (dayOfWeek) {
-            0 -> "Pazar"
-            1 -> "Pazartesi"
-            2 -> "Salı"
-            3 -> "Çarşamba"
-            4 -> "Perşembe"
-            5 -> "Cuma"
-            else -> "Cumartesi"
-        }
-    }
 
     override fun onUserInteraction() {
         super.onUserInteraction()
@@ -58,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         cityList.shuffle()
         var currentCity = cityList[(0..3).random()]
         city.text = currentCity
+
         randomWeatherConditions(currentCity)
     }
 
