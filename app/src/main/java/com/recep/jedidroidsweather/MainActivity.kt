@@ -1,21 +1,18 @@
 package com.recep.jedidroidsweather
 
 import android.annotation.SuppressLint
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
-import java.time.DayOfWeek
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     val cityList = mutableListOf("Londra", "İstanbul", "Berlin", "Atina")
-    val weatherConditionList = mutableListOf("Foggy", "Snowy", "Clear", "Rainy")
+//    val weatherConditionList = mutableListOf("Foggy", "Snowy", "Clear", "Rainy")
 
     val city: TextView by lazy { findViewById(R.id.citylabel_MainActivity_textView) }
     val dateInformation: TextView by lazy { findViewById(R.id.date_MainActivity_textView) }
@@ -29,9 +26,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         randomCity()
 
-        val c = Calendar.getInstance()
-        val cDayName = c.get(Calendar.DAY_OF_WEEK)
-        val date = SimpleDateFormat("EEEE, dd MMM yyyy").format(c.getTime())
+        val calendar = Calendar.getInstance()
+        val date = SimpleDateFormat("EEEE, dd MMM yyyy").format(calendar.time)
 
         dateInformation.text = date
         Log.e("onCreate", date)
@@ -45,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun randomCity() {
         cityList.shuffle()
-        var currentCity = cityList[(0..3).random()]
+        val currentCity = cityList[(0..3).random()]
         city.text = currentCity
 
         randomWeatherConditions(currentCity)
